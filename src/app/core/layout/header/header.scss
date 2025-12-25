@@ -1,0 +1,20 @@
+$fontex_Anta: 'Anta';
+$fontex_Jesifin: 'Josefin Sans';
+$BG-color_munu: #89bcd9;
+
+.mobile_menu {
+  font-family: $fontex_Jesifin;
+  font-size: 24px;
+  text-align: center;
+  background: $BG-color_munu;
+  padding: 20px;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    li {
+      list-style: none;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+$fontex_Anta: 'Anta';
+$fontex_Josefin: 'Josefin Sans';
+.hero {
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.hero__canvas {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* LEFT */
+.hero__circle {
+  position: relative;
+  width: 443px;
+  height: 593px;
+  flex: 0 0 593px;
+}
+
+.hero__circle .hovershape,
+.hero__circle .shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 449px;
+  height: auto;
+}
+
+.hero__circle .myPhoto {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 435px;
+  height: auto;
+  z-index: 4;
+}
+
+.hero__content h1 {
+  margin: 0;
+  font-family: $fontex_Anta;
+  font-size: 64px;
+  letter-spacing: 2px;
+}
+
+.hero__content p {
+  margin-top: 12px;
+  font-family: $fontex_Josefin;
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 1024px) {
+  .hero__canvas {
+    padding: 0 14px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 450px;
+  }
+
+  .hero__content {
+    align-items: center;
+    text-align: center;
+  }
+}
