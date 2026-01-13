@@ -1,9 +1,9 @@
-$fontex_Anta: 'Anta';
-$fontex_Jesifin: 'Josefin Sans';
-
 .footer {
-  font-family: $fontex_Anta;
-  text-align: center;
-  font-size: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  font-size: 24px;
   font-weight: 700;
+  background: #89bcd9;
 }

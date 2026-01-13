@@ -1,16 +1,21 @@
 <section class="hero">
   <div class="hero__canvas">
     <div class="hero__circle">
-      <img src="images/p-hover.png" alt="my Photo" class="hovershape" />
-      <img src="images/shape.png" alt="my Photo" class="shape" />
-      <img src="images/yusra.png" alt="my Photo" class="myPhoto" />
+      <img src="images/defeult.png" alt="shape" class="shape default" />
+      <img src="images/hover.png" alt="shape" class="shape hover" />
+      <img src="images/yusra.png" alt="Yusra" class="yusra" />
     </div>
 
     <div class="hero__content">
-      <app-social-icons></app-social-icons>
-      <h1>Claudia Fohrer</h1>
-      <p>FRONTEND DEVELOPER</p>
-      <app-scroll-indicator></app-scroll-indicator>
+      <div class="social">
+        <app-social-icons></app-social-icons>
+      </div>
+
+      <h1 class="name">Claudia Fohrer</h1>
+      <h3 class="role">FRONTEND DEVELOPER</h3>
+      <div class="btn-down">
+        <app-scroll-indicator></app-scroll-indicator>
+      </div>
     </div>
   </div>
 </section>

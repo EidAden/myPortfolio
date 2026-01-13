@@ -1,9 +1,24 @@
-.content {
-  height: 100vh;
+.page-layout {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #262e34;
+  position: relative;
 }
-@media (max-width: 1024px) {
-  .content {
-    height: 100%;
-    padding: 0 16px;
-  }
+.header {
+  height: 100vh;
+  position: static;
+}
+
+.desktop-menu {
+  top: 0;
+  position: sticky;
+  z-index: 100;
+}
+
+.content {
+  position: sticky;
+  min-height: 100vh;
 }

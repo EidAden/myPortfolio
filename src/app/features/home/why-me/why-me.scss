@@ -1,0 +1,45 @@
+.me_content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 176px;
+  gap: 24px;
+}
+
+.talk__btns {
+  position: relative;
+  width: 134px; // 👉 an deine Button-Größe anpassen
+  height: 64px;
+  cursor: pointer;
+}
+
+.talk__btns img {
+  width: 100%;
+  display: block;
+}
+
+/* Normal Button */
+.btn__talk {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover Button */
+.btn__talk_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.25s ease;
+}
+
+/* Hover-Effekt */
+.talk__btns:hover .btn__talk_hover {
+  opacity: 1;
+}
+
+.talk__btns:hover .btn__talk {
+  opacity: 0;
+}

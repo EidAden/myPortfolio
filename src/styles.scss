@@ -25,7 +25,6 @@ $BG-color_munu: #89bcd9;
 $fontex_Anta: 'Anta';
 $fontex_Josefin: 'Josefin Sans';
 
-/* Angular Material v3 Theme */
 html {
   @include mat.theme(
     (
@@ -38,15 +37,14 @@ html {
   );
 }
 
-/* Global reset */
 html,
 body {
   height: 100%;
   margin: 0;
 }
 
-/* App body */
 body {
+  background: #262e34;
   color-scheme: dark;
   font-family: $fontex_Josefin;
 
