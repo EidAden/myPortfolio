@@ -1,17 +1,63 @@
+$fontex_Anta: 'Anta';
+$fontex_Josefin: 'Josefin Sans';
+
+.why__me {
+  h1 {
+    font-family: $fontex_Anta;
+    font-size: 48px;
+    color: #89bcd9;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
 .me_content {
-  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 176px;
-  gap: 24px;
+  gap: 30px;
+  font-family: $fontex_Josefin, sans-serif;
+  color: #f8f5ec;
+  padding: 0 40px;
+  span {
+    font-family: $fontex_Josefin, sans-serif;
+    color: #89bcd9;
+  }
+}
+
+.location {
+  position: relative;
+
+  .elp2 {
+    width: 74px;
+    height: 64px;
+  }
+  .elp1 {
+    position: absolute;
+    width: 20px;
+    top: 40px;
+    left: 25px;
+    z-index: 1;
+  }
 }
 
 .talk__btns {
   position: relative;
-  width: 134px; // 👉 an deine Button-Größe anpassen
-  height: 64px;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+
   cursor: pointer;
+
+  .btn__talk {
+    width: 134px;
+    height: 48px;
+  }
+
+  .btn__talk_hover {
+    width: 134px;
+    height: 48px;
+  }
 }
 
 .talk__btns img {
@@ -19,23 +65,21 @@
   display: block;
 }
 
-/* Normal Button */
 .btn__talk {
   position: relative;
   z-index: 1;
 }
 
-/* Hover Button */
 .btn__talk_hover {
   position: absolute;
   top: 0;
-  left: 0;
+  width: 134px;
+  height: 48px;
   opacity: 0;
   z-index: 2;
   transition: opacity 0.25s ease;
 }
 
-/* Hover-Effekt */
 .talk__btns:hover .btn__talk_hover {
   opacity: 1;
 }

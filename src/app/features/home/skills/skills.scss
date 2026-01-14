@@ -1,0 +1,82 @@
+$fontex_Anta: 'Anta';
+$fontex_Josefin: 'Josefin Sans';
+
+.skills__main {
+  padding: 0 40px;
+  h1 {
+    font-family: $fontex_Anta;
+    font-size: 48px;
+    color: #89bcd9;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .skills_icons {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 60px;
+    .section_one {
+      display: flex;
+      justify-content: stretch;
+      align-items: center;
+      gap: 60px;
+    }
+    .section_two {
+      display: flex;
+      justify-content: stretch;
+      align-items: center;
+      gap: 60px;
+    }
+    .section_three {
+      display: flex;
+      justify-content: stretch;
+      align-items: center;
+      gap: 60px;
+    }
+  }
+}
+
+.shape {
+  position: relative;
+  width: 380px;
+  height: 480px;
+  .shape_hover {
+    position: absolute;
+    top: 0;
+    width: 380px;
+    height: 380px;
+    object-fit: contain;
+  }
+
+  .shape_bg {
+    position: absolute;
+    top: 0;
+    width: 380px;
+    height: 380px;
+    z-index: 1;
+  }
+
+  .shape_hover {
+    z-index: 2;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  &:hover {
+    .shape_hover {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .skills_icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
