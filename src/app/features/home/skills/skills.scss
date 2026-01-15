@@ -2,7 +2,7 @@ $fontex_Anta: 'Anta';
 $fontex_Josefin: 'Josefin Sans';
 
 .skills__main {
-  padding: 0 40px;
+  padding-left: 286px;
   h1 {
     font-family: $fontex_Anta;
     font-size: 48px;
@@ -69,6 +69,24 @@ $fontex_Josefin: 'Josefin Sans';
     .shape_hover {
       opacity: 1;
       transform: scale(1);
+    }
+  }
+  .mot_text {
+    padding-left: 60px;
+    padding-top: 60px;
+
+    p {
+      font-size: 18px;
+      font-family: $fontex_Josefin, sans-serif;
+      color: #fffdfd;
+    }
+
+    .coming_cours {
+      width: 150px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 20px;
     }
   }
 }

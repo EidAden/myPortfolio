@@ -1,14 +1,17 @@
 $fontex_Anta: 'Anta';
 $fontex_Josefin: 'Josefin Sans';
 
-.why__me {
-  h1 {
-    font-family: $fontex_Anta;
-    font-size: 48px;
-    color: #89bcd9;
-    font-size: 60px;
-    font-weight: 400;
-    text-align: center;
+.container {
+  padding-left: 286px;
+  .why__me {
+    h1 {
+      font-family: $fontex_Anta;
+      font-size: 48px;
+      color: #89bcd9;
+      font-size: 60px;
+      font-weight: 400;
+      text-align: center;
+    }
   }
 }
 
