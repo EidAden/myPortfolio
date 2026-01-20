@@ -1,0 +1,84 @@
+$fontex_Anta: 'Anta';
+$fontex_Josefin: 'Josefin Sans';
+
+.main__container {
+  height: auto;
+  min-height: 500px;
+  padding-left: 150px;
+  h3 {
+    font-family: $fontex_Josefin;
+    color: #89bcd9;
+    text-align: center;
+  }
+  .shape_content {
+    position: relative;
+    width: 300px;
+    height: 300px;
+
+    .tas-title {
+      position: absolute;
+      left: 105px;
+      top: 50px;
+      h4 {
+        font-family: $fontex_Josefin;
+        font-size: 26px;
+        font-weight: 700;
+        width: 250px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0px;
+      }
+      p {
+        font-family: $fontex_Josefin;
+        font-size: 18px;
+        color: #f8f5ec;
+        span {
+          font-family: $fontex_Josefin;
+          font-size: 18px;
+          color: #89bcd9;
+        }
+      }
+    }
+    .text_test {
+      position: absolute;
+      top: 180px;
+      left: 80px;
+      width: 292px;
+      p {
+        font-family: $fontex_Josefin;
+        font-size: 18px;
+        color: #f8f5ec;
+      }
+    }
+
+    img {
+      position: absolute;
+      inset: 0;
+    }
+
+    .el-img {
+      z-index: 2;
+    }
+
+    .h-img {
+      z-index: 1;
+      opacity: 0;
+    }
+
+    &:hover {
+      .el-img {
+        opacity: 0;
+      }
+
+      .h-img {
+        opacity: 1;
+      }
+    }
+  }
+
+  .shape_cards {
+    display: flex;
+    justify-content: start;
+    gap: 120px;
+  }
+}

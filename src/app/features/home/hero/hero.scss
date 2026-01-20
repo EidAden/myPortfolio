@@ -41,16 +41,16 @@ $fontex_Josefin: 'Josefin Sans';
   position: relative;
 
   .shape {
-    top: 40px;
+    top: 120px;
     position: absolute;
-    width: 583px;
+    width: 483px;
     transition: opacity 0.8s ease;
     rotate: -45deg;
   }
 
   .hover {
-    top: 17px;
-    width: 585px;
+    top: 100px;
+    width: 485px;
 
     rotate: -40deg;
     opacity: 0;
@@ -65,9 +65,9 @@ $fontex_Josefin: 'Josefin Sans';
   .yusra {
     position: relative;
     z-index: 2;
-    width: 535px;
+    width: 435px;
     height: 683px;
-    top: 0px;
+    top: 50px;
     left: 27px;
   }
 }

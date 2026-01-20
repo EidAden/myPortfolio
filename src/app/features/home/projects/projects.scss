@@ -10,7 +10,6 @@ $fontex_Josefin: 'Josefin Sans';
     color: #89bcd9;
   }
   button {
-    margin: 20px;
     border: none;
     font-size: 30px;
     background: transparent;
@@ -32,7 +31,7 @@ $fontex_Josefin: 'Josefin Sans';
 .main_content {
   width: 100%;
 
-  .btns {
+  .group__btns {
     display: flex;
     gap: 16px; // optional
   }
@@ -43,7 +42,7 @@ $fontex_Josefin: 'Josefin Sans';
     background: transparent;
     color: #89bcd9;
     width: 248px;
-    height: 97px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,14 +51,14 @@ $fontex_Josefin: 'Josefin Sans';
       cursor: pointer;
       color: #f8f5ec;
       background: #2d383f;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
     }
   }
 
   .info_card {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-left: 120px;
     padding-bottom: 20px;
     background: #2d383f;
@@ -98,11 +97,58 @@ $fontex_Josefin: 'Josefin Sans';
         gap: 20px;
         padding-top: 20px;
         padding-bottom: 20px;
+
+        .Join {
+          width: 453px;
+          height: 612px;
+          border-radius: 30px;
+        }
         img {
           width: 38px;
           height: auto;
         }
       }
     }
+  }
+}
+
+.btns {
+  display: flex;
+  gap: 16px;
+  padding: 14px 20px;
+  background: #2f3b42;
+  border-radius: 18px;
+}
+
+.btns {
+  display: flex;
+  gap: 16px;
+  padding: 14px 20px;
+  background: transparent;
+  border-radius: 18px;
+}
+
+.btn {
+  padding: 10px 26px;
+  border-radius: 999px;
+  border: 1px solid #5c6b73;
+  color: #f8f5ec;
+  text-decoration: none;
+  font-family: $fontex_Josefin;
+
+  &:hover {
+    border-color: #89bcd9;
+    background: #262e34;
+  }
+}
+
+.primary {
+  background: #89bcd9;
+  color: #262e34;
+  border-color: #89bcd9;
+  font-family: $fontex_Josefin;
+  &:hover {
+    border-color: #f8f5ec;
+    background: #f8f5ec;
   }
 }
