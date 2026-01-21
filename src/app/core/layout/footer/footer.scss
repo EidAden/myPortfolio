@@ -1,9 +1,91 @@
+$font-anta: 'Anta';
+$font-josefin: 'Josefin Sans';
+
 .footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 150px;
   font-size: 24px;
   font-weight: 700;
   background: #89bcd9;
+
+  .social_icons {
+    display: flex;
+    gap: 20px;
+  }
+
+  .icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .icon-hover {
+      opacity: 0;
+    }
+
+    &:hover {
+      .icon-default {
+        opacity: 0;
+      }
+
+      .icon-hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .logo {
+    width: 100px;
+    height: 50px;
+    position: relative;
+  }
+
+  .logo-text {
+    position: absolute;
+    top: 30px;
+    left: 18px;
+  }
+  .logo-name {
+    font-family: 'Anta';
+    font-size: 12px;
+    color: #f8f5ec;
+    padding-left: 12px;
+    font-weight: 200;
+    line-height: 20%;
+  }
+
+  .logo-role {
+    font-family: 'Josefin Sans';
+    font-size: 12px;
+    color: #262e34;
+    padding-left: 10px;
+    position: absolute;
+    line-height: 20%;
+    font-weight: 200;
+    top: 30px;
+  }
+  .legel_notes {
+    font-family: $font-josefin;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 16px;
+    color: #262e34;
+    p {
+      font-size: 14px;
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+  }
 }

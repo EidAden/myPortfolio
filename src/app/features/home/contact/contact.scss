@@ -38,11 +38,13 @@ section {
 }
 .contact {
   padding-left: 110px;
+  height: 661px;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 35px;
 
   h2 {
     font-family: $fontex_Anta;
@@ -268,8 +270,107 @@ section {
       font-family: $fontex_Josefin;
     }
   }
+  /*  .policy {
+    padding-top: 20px;
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+    input {
+      width: 100px;
+    }
+    p {
+      font-family: $fontex_Josefin;
+      font-size: 14px;
+      color: #f8f5ec;
+    }
+    span {
+      font-family: $fontex_Josefin;
+      font-size: 18px;
+      color: #89bcd9;
+    }
+  } */
 
-  // Responsive
+  .policy {
+    display: flex;
+    align-items: center; // ✅ Text & Icon zentriert
+    gap: 12px;
+    cursor: pointer;
+    font-family: $fontex_Josefin;
+    color: #f8f5ec;
+    padding-top: 20px;
+
+    input {
+      display: none;
+    }
+
+    .icon {
+      flex-shrink: 0; // ✅ Icon darf nicht schrumpfen
+      position: relative;
+      width: 24px;
+      height: 24px;
+
+      img {
+        position: absolute;
+        inset: 0;
+        width: 100%; // ✅ alle Icons gleiche Größe
+        height: 100%;
+        object-fit: contain; // ✅ kein Verzerren
+      }
+
+      .icon-hover,
+      .icon-checked {
+        opacity: 0;
+      }
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.4;
+      font-size: 14px;
+      span {
+        color: #89bcd9;
+      }
+    }
+
+    /* Hover (nur wenn NICHT checked) */
+    &:hover input:not(:checked) + .icon {
+      .icon-default {
+        opacity: 0;
+      }
+      .icon-hover {
+        opacity: 1;
+      }
+    }
+
+    /* Checked */
+    input:checked + .icon {
+      .icon-default,
+      .icon-hover {
+        opacity: 0;
+      }
+      .icon-checked {
+        opacity: 1;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .actions button {
+    width: 80px;
+    height: 38px;
+    border-radius: 30px;
+    border: 1px solid #f8f5ec;
+    font-family: $fontex_Josefin;
+    background-color: transparent;
+    color: #f8f5ec;
+    cursor: pointer;
+  }
+
   @media (max-width: 900px) {
     .top {
       grid-template-columns: 1fr;
