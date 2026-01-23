@@ -50,7 +50,7 @@ $font-josefin: 'Josefin Sans';
     position: relative;
   }
 
-  .logo-text {
+  /*  .logo-text {
     position: absolute;
     top: 30px;
     left: 18px;
@@ -73,7 +73,56 @@ $font-josefin: 'Josefin Sans';
     line-height: 20%;
     font-weight: 200;
     top: 30px;
+  } */
+
+  .logo_content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
   }
+
+  .logo_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    text-align: center;
+  }
+
+  .logo-img {
+    width: 100px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+
+    &:hover {
+      transform: scaleX(1.15);
+    }
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.1;
+  }
+
+  .logo-name {
+    font-family: $font-anta;
+    font-size: 12px;
+    font-weight: 400;
+    color: #f8f5ec;
+    letter-spacing: 0.5px;
+  }
+
+  .logo-role {
+    font-family: $font-josefin;
+    font-size: 11px;
+    font-weight: 300;
+    color: #262e34;
+  }
+
   .legel_notes {
     font-family: $font-josefin;
     display: flex;
@@ -82,8 +131,18 @@ $font-josefin: 'Josefin Sans';
     gap: 8px;
     font-size: 16px;
     color: #262e34;
+    .notices {
+      font-family: $font-josefin;
+      font-size: 14px;
+      font-weight: 200;
+      cursor: pointer;
+      &:hover {
+        color: #f8f5ec;
+      }
+    }
     p {
       font-size: 14px;
+      font-weight: 200;
       margin-block-start: 0;
       margin-block-end: 0;
     }

@@ -11,7 +11,6 @@ $fontex_Josefin: 'Josefin Sans';
   max-width: 1214px;
   margin: 0 auto;
   background: #262e34;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,7 +80,7 @@ $fontex_Josefin: 'Josefin Sans';
 
 @media (max-width: 1124px) {
   .hero {
-    height: auto;
+    height: 606px;
   }
   .hero__content {
     padding-left: 20px;
@@ -93,22 +92,32 @@ $fontex_Josefin: 'Josefin Sans';
   .hero__circle {
     width: 350px;
     .yusra {
-      width: 300px;
-      height: 340px;
+      width: 350px;
+      height: 600px;
     }
 
     .hover,
     .shape {
-      width: 305px;
+      width: 405px;
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .hero__circle {
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+  .hero {
+    height: 800px;
+  }
+  /* .mobile_menu {
+    display: none;
+  } */
+
+  .fullscreen {
+    display: none;
   }
   .hero__canvas {
     flex-direction: column;

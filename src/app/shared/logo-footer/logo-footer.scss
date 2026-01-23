@@ -5,30 +5,46 @@ $font-josefin: 'Josefin Sans';
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100px;
   cursor: pointer;
 }
 
-.logo {
+.logo_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  text-align: center;
+}
+
+.logo-img {
   width: 100px;
-  height: 50px;
-  position: relative;
+  height: 40px;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+
+  &:hover {
+    transform: scaleX(1.15);
+  }
 }
 
 .logo-text {
-  position: absolute;
-  top: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
 }
+
 .logo-name {
-  font-family: 'Anta';
-  font-size: 16px;
+  font-family: $font-anta;
+  font-size: 12px;
+  font-weight: 400;
   color: #f8f5ec;
-  padding-left: 12px;
+  letter-spacing: 0.5px;
 }
 
 .logo-role {
-  font-family: 'Josefin Sans';
-  font-size: 16px;
+  font-family: $font-josefin;
+  font-size: 11px;
+  font-weight: 300;
   color: #262e34;
-  padding-left: 10px;
 }

@@ -230,7 +230,6 @@ section {
   .input_email {
     flex: 1;
   }
-
   .input_name span,
   .input_email span {
     font-family: $fontex_Josefin;
@@ -270,30 +269,10 @@ section {
       font-family: $fontex_Josefin;
     }
   }
-  /*  .policy {
-    padding-top: 20px;
-    display: flex;
-    justify-content: start;
-    gap: 20px;
-    align-items: center;
-    input {
-      width: 100px;
-    }
-    p {
-      font-family: $fontex_Josefin;
-      font-size: 14px;
-      color: #f8f5ec;
-    }
-    span {
-      font-family: $fontex_Josefin;
-      font-size: 18px;
-      color: #89bcd9;
-    }
-  } */
 
   .policy {
     display: flex;
-    align-items: center; // ✅ Text & Icon zentriert
+    align-items: center;
     gap: 12px;
     cursor: pointer;
     font-family: $fontex_Josefin;
@@ -305,7 +284,7 @@ section {
     }
 
     .icon {
-      flex-shrink: 0; // ✅ Icon darf nicht schrumpfen
+      flex-shrink: 0;
       position: relative;
       width: 24px;
       height: 24px;
@@ -313,9 +292,9 @@ section {
       img {
         position: absolute;
         inset: 0;
-        width: 100%; // ✅ alle Icons gleiche Größe
+        width: 100%;
         height: 100%;
-        object-fit: contain; // ✅ kein Verzerren
+        object-fit: contain;
       }
 
       .icon-hover,
@@ -332,8 +311,6 @@ section {
         color: #89bcd9;
       }
     }
-
-    /* Hover (nur wenn NICHT checked) */
     &:hover input:not(:checked) + .icon {
       .icon-default {
         opacity: 0;
@@ -343,7 +320,6 @@ section {
       }
     }
 
-    /* Checked */
     input:checked + .icon {
       .icon-default,
       .icon-hover {
@@ -369,6 +345,14 @@ section {
     background-color: transparent;
     color: #f8f5ec;
     cursor: pointer;
+  }
+
+  form:has(.policy input:checked) .actions button {
+    border: 1px solid #89bcd9;
+  }
+
+  .actions button {
+    border: 1px solid #f8f5ec;
   }
 
   @media (max-width: 900px) {
