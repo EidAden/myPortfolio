@@ -28,7 +28,9 @@
       color: #262e34;
       font-size: 26px;
       font-weight: 500;
-      font-family: Josefin Sans, sans-serif;
+      font-family:
+        Josefin Sans,
+        sans-serif;
 
       &:hover {
         color: #f8f5ec;
@@ -104,7 +106,7 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .menu__wrap {
     display: none;
   }

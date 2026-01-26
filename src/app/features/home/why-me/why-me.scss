@@ -42,6 +42,21 @@ $fontex_Josefin: 'Josefin Sans';
     left: 25px;
     z-index: 1;
   }
+
+  p {
+    font-size: 30px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+}
+.mobile_content {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.log_img {
+  display: none;
 }
 
 .talk__btns {
@@ -89,4 +104,29 @@ $fontex_Josefin: 'Josefin Sans';
 
 .talk__btns:hover .btn__talk {
   opacity: 0;
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding-left: 10px;
+  }
+  .me_content {
+    width: fit-content;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 0;
+  }
+  .mobile_content {
+    width: 100%;
+    .location {
+      display: none;
+    }
+    .log_img {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
