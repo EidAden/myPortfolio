@@ -3,7 +3,7 @@ $fontex_Josefin: 'Josefin Sans';
 
 .main__container {
   height: auto;
-  min-height: 500px;
+  min-height: 400px;
   padding-left: 150px;
   h3 {
     font-family: $fontex_Josefin;
@@ -116,12 +116,17 @@ $fontex_Josefin: 'Josefin Sans';
     scroll-snap-type: x mandatory;
   }
 
+  .main__container {
+    height: 350px !important;
+  }
+
   .shape_content {
     scroll-snap-align: start;
     flex: 0 0 auto;
   }
   .main__container {
     padding-left: 20px;
+    height: 50px;
 
     .shape_cards {
       gap: 50px;

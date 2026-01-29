@@ -1,18 +1,147 @@
 $fontex_Anta: 'Anta';
 $fontex_Josefin: 'Josefin Sans';
 
-section {
+/* Optional global */
+* {
+  box-sizing: border-box;
+}
+
+/* section {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
+  gap: 24px;
+}
+  */
 
-  .up_arrow {
+section {
+  position: relative; /* wichtig für absolute arrow */
+  display: flex;
+  justify-content: center; /* center content */
+  align-items: flex-start;
+  padding: 0 40px; /* etwas Rand links/rechts */
+}
+
+/* Arrow rechts (Desktop) */
+.up_arrow {
+  position: relative;
+  width: 30px;
+  height: 60px;
+  cursor: pointer;
+
+  .arrow {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.25s ease;
+  }
+
+  .hover {
+    opacity: 0;
+  }
+
+  &:hover {
+    .default {
+      opacity: 0;
+    }
+    .hover {
+      opacity: 1;
+    }
+  }
+}
+
+.contact {
+  /*  width: 100%;
+  max-width: 911px;
+  padding-left: 150px;
+
+  display: flex; */
+  padding-left: 0; /* <- DAS macht’s wieder mittig */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 911px;
+
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-family: $fontex_Anta;
+    font-size: 54px;
+    font-weight: 400;
+    color: #89bcd9;
+    margin: 0 0 24px;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  /* TOP: Text links, Kontakt rechts */
+  .top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+  .text_info {
+    flex: 1;
+    max-width: 429px;
+
+    p {
+      margin: 0;
+      font-family: $fontex_Josefin;
+      font-size: 16px;
+      line-height: 1.2;
+      color: #f8f5ec;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* Email + Tel -> 1 Style (kein Doppelcode mehr) */
+  .contact-link,
+  .contact-tel {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    font-family: $fontex_Josefin;
+    font-size: 18px;
+    color: #f8f5ec;
+    transition: color 0.25s ease;
+
+    &:hover {
+      color: #89bcd9;
+
+      /* Icon swap (default -> hover) */
+      :is(.icon, .icon2) img:first-child {
+        opacity: 0;
+      }
+      :is(.icon, .icon2) img:last-child {
+        opacity: 1;
+      }
+    }
+  }
+
+  /* Icon Stack (für .icon UND .icon2) */
+  :is(.icon, .icon2) {
     position: relative;
-    width: 30px;
-    height: 60px;
-    cursor: pointer;
+    width: 26px;
+    height: 30px;
+    flex-shrink: 0;
 
-    .arrow {
+    img {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -21,255 +150,66 @@ section {
       transition: opacity 0.25s ease;
     }
 
-    .hover {
+    img:last-child {
       opacity: 0;
     }
-
-    &:hover {
-      .default {
-        opacity: 0;
-      }
-
-      .hover {
-        opacity: 1;
-      }
-    }
   }
-}
-.contact {
-  padding-left: 110px;
-  height: 661px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-bottom: 35px;
-
-  h2 {
-    font-family: $fontex_Anta;
-    font-size: 54px;
-    font-weight: 400;
-    text-align: center;
-    color: #89bcd9;
-  }
-  .card {
+  /* FORM */
+  form {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    width: 911px;
-
-    .top {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 60px;
-      padding-bottom: 30px;
-    }
-    .text_info {
-      width: 429px;
-
-      p {
-        font-family: $fontex_Josefin;
-        font-size: 16px;
-        margin-block-start: 0;
-        margin-block-end: 0;
-      }
-    }
-
-    .line {
-      display: flex;
-      justify-content: center;
-      padding-bottom: 15px;
-    }
-
-    .contact-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 16px;
-      text-decoration: none;
-      font-family: $fontex_Josefin;
-      font-size: 18px;
-      color: #f8f5ec;
-      cursor: pointer;
-
-      transition: color 0.25s ease;
-
-      &:hover {
-        color: #89bcd9;
-
-        .em_d {
-          opacity: 0;
-        }
-
-        .em_h {
-          opacity: 1;
-        }
-      }
-    }
-
-    .icon {
-      position: relative;
-      width: 26px;
-      height: 30px;
-
-      img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        transition: opacity 0.25s ease;
-      }
-
-      .em_h {
-        opacity: 0;
-      }
-    }
-
-    .line {
-      display: flex;
-      justify-content: center;
-    }
-
-    .contact-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 16px;
-      text-decoration: none;
-      font-family: $fontex_Josefin;
-      font-size: 18px;
-      color: #f8f5ec;
-      cursor: pointer;
-      transition: color 0.25s ease;
-
-      &:hover {
-        color: #89bcd9;
-
-        .ph_d {
-          opacity: 0;
-        }
-
-        .ph_h {
-          opacity: 1;
-        }
-      }
-    }
-    .icon {
-      position: relative;
-      width: 26px;
-      height: 30px;
-
-      img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        transition: opacity 0.25s ease;
-      }
-
-      .ph_h {
-        opacity: 0;
-      }
-    }
-
-    .contact-tel {
-      width: 260px;
-      display: inline-flex;
-      align-items: center;
-      gap: 16px;
-      text-decoration: none;
-      font-family: $fontex_Josefin;
-      font-size: 18px;
-      color: #f8f5ec;
-      cursor: pointer;
-      transition: color 0.25s ease;
-
-      &:hover {
-        color: #89bcd9;
-
-        img:first-child {
-          opacity: 0;
-        }
-        img:last-child {
-          opacity: 1;
-        }
-      }
-    }
-
-    .icon2 {
-      position: relative;
-      width: 26px;
-      height: 30px;
-
-      img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        transition: opacity 0.25s ease;
-      }
-
-      img:last-child {
-        opacity: 0;
-      }
-    }
+    gap: 18px;
   }
 
   .row {
     display: flex;
     gap: 20px;
     width: 100%;
-    padding-bottom: 20px;
   }
 
   .input_name,
-  .input_email {
-    flex: 1;
-  }
-  .input_name span,
-  .input_email span {
-    font-family: $fontex_Josefin;
-    padding-left: 20px;
+  .input_email,
+  .text_area {
+    width: 100%;
   }
 
-  .input_name input,
-  .input_email input {
+  .input_name span,
+  .input_email span,
+  .text_area span {
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 6px;
+    font-family: $fontex_Josefin;
+    color: #f8f5ec;
+    font-size: 14px;
+  }
+
+  input,
+  textarea {
     width: 100%;
-    height: 45px;
-    box-sizing: border-box;
     border-radius: 30px;
-    border: 2px solid #89bcd9;
+    border: 1px solid #89bcd9;
     background: transparent;
     font-family: $fontex_Josefin;
-    padding-left: 20px;
+    font-size: 14px;
+    color: #f8f5ec;
+    outline: none;
   }
 
-  .text_area {
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
-    span {
-      font-family: $fontex_Josefin;
-      padding-left: 20px;
-    }
-    textarea {
-      width: 611px;
-      height: 80px;
-      border-radius: 30px;
-      border: 1px #89bcd9;
-      padding-top: 20px;
-      padding-left: 20px;
-      background: transparent;
-      border: 1px solid #89bcd9;
-      font-family: $fontex_Josefin;
-    }
+  input {
+    height: 45px;
+    padding: 0 20px;
   }
 
+  textarea {
+    height: 145px;
+    padding: 16px 20px;
+    resize: none;
+  }
+
+  /* POLICY (dein code ist schon gut -> nur etwas aufräumen) */
   .policy {
     display: flex;
     align-items: center;
@@ -277,17 +217,16 @@ section {
     cursor: pointer;
     font-family: $fontex_Josefin;
     color: #f8f5ec;
-    padding-top: 20px;
 
     input {
       display: none;
     }
 
     .icon {
-      flex-shrink: 0;
-      position: relative;
       width: 24px;
       height: 24px;
+      position: relative;
+      flex-shrink: 0;
 
       img {
         position: absolute;
@@ -305,12 +244,14 @@ section {
 
     p {
       margin: 0;
-      line-height: 1.4;
       font-size: 14px;
+      line-height: 1.4;
+
       span {
         color: #89bcd9;
       }
     }
+
     &:hover input:not(:checked) + .icon {
       .icon-default {
         opacity: 0;
@@ -336,32 +277,90 @@ section {
     justify-content: flex-end;
   }
 
-  .actions button {
+  button {
     width: 80px;
     height: 38px;
     border-radius: 30px;
     border: 1px solid #f8f5ec;
     font-family: $fontex_Josefin;
-    background-color: transparent;
+    background: transparent;
     color: #f8f5ec;
     cursor: pointer;
   }
 
-  form:has(.policy input:checked) .actions button {
-    border: 1px solid #89bcd9;
+  /* Button "aktiv", wenn checkbox checked */
+  form:has(.policy input:checked) button {
+    border-color: #89bcd9;
+  }
+}
+
+/* Desktop: ALLE Placeholder ausblenden */
+.contact input::placeholder,
+.contact textarea::placeholder {
+  opacity: 0;
+}
+
+@media (max-width: 800px) {
+  /* Labels ausblenden */
+  .contact .input_name span,
+  .contact .input_email span,
+  .contact .text_area span {
+    display: none;
   }
 
-  .actions button {
-    border: 1px solid #f8f5ec;
+  /* Placeholder wieder anzeigen */
+  .contact input::placeholder,
+  .contact textarea::placeholder {
+    opacity: 1;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    padding-bottom: 42px;
   }
 
-  @media (max-width: 900px) {
-    .top {
-      grid-template-columns: 1fr;
+  .contact {
+    padding-left: 5px;
+    padding-right: 6px;
+    max-width: 620px;
+    padding-bottom: 62px;
+    h2 {
+      font-size: 32px;
     }
+  }
 
-    .row {
-      grid-template-columns: 1fr;
-    }
+  .top {
+    flex-direction: column-reverse;
+    gap: 16px !important;
+    align-items: flex-start;
+  }
+
+  .text_info {
+    max-width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  textarea {
+    height: 168px;
+  }
+
+  /* .up_arrow {
+    order: 2; 
+    margin-top: 10px;
+  } 
+    */
+  up_arrow {
+    position: static;
+    margin-top: 10px;
+    padding-top: 60px;
   }
 }
