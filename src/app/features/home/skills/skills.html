@@ -1,57 +1,61 @@
-<div class="skills__main">
-  <h2>Skills</h2>
+<section class="skills" id="skills">
+  <h2 class="skills__title">My Skills</h2>
 
-  <div class="skills_icons">
-    <div class="allicons">
-      <div class="section_one">
-        <img class="width_mobile" src="skills_img/angular.png" alt="angular" />
-        <img class="width_mobile" src="skills_img/T-Script.png" alt="css" />
-        <img class="width_mobile" src="skills_img/J-Script.png" alt="javascript" />
-        <img class="width_mobile" src="skills_img/HTML.png" alt="angular" />
+  <div class="skills__layout">
+    <!-- LEFT: Icons -->
+    <div class="skills__icons">
+      <div class="skills__row">
+        <img class="skills__icon" src="skills_img/angular.png" alt="Angular" />
+        <img class="skills__icon" src="skills_img/T-Script.png" alt="TypeScript" />
+        <img class="skills__icon" src="skills_img/J-Script.png" alt="JavaScript" />
+        <img class="skills__icon" src="skills_img/HTML.png" alt="HTML" />
       </div>
-      <div class="section_two">
-        <img class="width_mobile" src="skills_img/CSS.png" alt="css" />
-        <img class="width_mobile" src="skills_img/Rest-Api.png" alt="scss" />
-        <img class="width_mobile" src="skills_img/Firebase.png" alt="figma" />
-        <img class="width_mobile" src="skills_img/GIT.png" alt="photoshop" />
+
+      <div class="skills__row">
+        <img class="skills__icon" src="skills_img/CSS.png" alt="CSS" />
+        <img class="skills__icon" src="skills_img/Rest-Api.png" alt="REST API" />
+        <img class="skills__icon" src="skills_img/Firebase.png" alt="Firebase" />
+        <img class="skills__icon" src="skills_img/GIT.png" alt="Git" />
       </div>
-      <div class="section_three">
-        <img class="width_mobile" src="skills_img/M-Design.png" alt="photoshop" />
-        <img class="width_mobile" src="skills_img/Scrum.png" alt="figma" />
+
+      <div class="skills__row skills__row--small">
+        <img class="skills__icon" src="skills_img/M-Design.png" alt="Material Design" />
+        <img class="skills__icon" src="skills_img/Scrum.png" alt="Scrum" />
       </div>
     </div>
 
-    <div class="shape">
-      <div class="mot_text">
-        <p>I am currently learning</p>
-        <div class="coming_cours">
-          <img src="skills_img/react.png" alt="react" />
-          <img src="skills_img/vue.png" alt="Vue" />
+    <!-- RIGHT: Learning circle -->
+    <div class="skills__learning">
+      <div class="skills__learning-content">
+        <p class="skills__learning-title">I am currently learning</p>
+
+        <div class="skills__learning-icons">
+          <img src="skills_img/react.png" alt="React" />
+          <img src="skills_img/vue.png" alt="Vue.js" />
         </div>
 
-        <p>
+        <p class="skills__learning-text">
           Show that you are motivated to continually improve your skills, implement innovative
           solutions and stay abreast of new technologies.
         </p>
       </div>
 
-      <img src="skills_img/el_BG.png" alt="shape" class="shape_bg" />
-      <img src="skills_img/el_BG.png" alt="shape" class="shape_hover" />
+      <img src="skills_img/el_BG.png" alt="" class="skills__learning-bg" />
+      <img src="skills_img/el_BG.png" alt="" class="skills__learning-hover" />
     </div>
 
-    <div class="mobile_content">
-      <div class="text_mobile_content">
-        <p class="title_mobile">I am currently learning</p>
+    <!-- MOBILE: learning text box -->
+    <div class="skills__learning-mobile">
+      <p class="skills__learning-mobile-title">What I am currently learning</p>
 
-        <div class="text">
-          <p>
-            Show that you are motivated to continually improve your skills, implement innovative
-            solutions and stay abreast of new technologies.
-          </p>
+      <div class="skills__learning-mobile-body">
+        <p>
+          Show that you are motivated to continually improve your skills, implement innovative
+          solutions and stay abreast of new technologies.
+        </p>
 
-          <img src="skills_img/learing.png" alt="learing" />
-        </div>
+        <img src="skills_img/learing.png" alt="Learning icons" />
       </div>
     </div>
   </div>
-</div>
+</section>

@@ -1,0 +1,15 @@
+.layout {
+  min-height: 100vh;
+  background: #262e34;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-content {
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+.app-footer {
+  flex: 0 0 auto;
+}

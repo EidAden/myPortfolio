@@ -2,10 +2,6 @@
 
 $BG-color_munu: #89bcd9;
 
-/* =========================
-   Fonts
-========================= */
-
 @font-face {
   font-display: swap;
   font-family: 'Anta';
@@ -42,8 +38,7 @@ body {
   height: 100%;
   margin: 0;
 }
-
-body {
+* body {
   background: #262e34;
   color-scheme: dark;
   font-family: $fontex_Josefin;

@@ -1,28 +1,18 @@
 $fontex_Anta: 'Anta';
 $fontex_Josefin: 'Josefin Sans';
 
-/* Optional global */
 * {
   box-sizing: border-box;
 }
 
-/* section {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 24px;
-}
-  */
-
 section {
-  position: relative; /* wichtig für absolute arrow */
+  position: relative;
   display: flex;
-  justify-content: center; /* center content */
+  justify-content: center;
   align-items: flex-start;
-  padding: 0 40px; /* etwas Rand links/rechts */
+  padding: 80px 20px;
 }
 
-/* Arrow rechts (Desktop) */
 .up_arrow {
   position: relative;
   width: 30px;
@@ -53,12 +43,7 @@ section {
 }
 
 .contact {
-  /*  width: 100%;
-  max-width: 911px;
-  padding-left: 150px;
-
-  display: flex; */
-  padding-left: 0; /* <- DAS macht’s wieder mittig */
+  padding-left: 0;
   margin: 0 auto;
   width: 100%;
   max-width: 911px;
@@ -82,7 +67,6 @@ section {
     gap: 22px;
   }
 
-  /* TOP: Text links, Kontakt rechts */
   .top {
     display: flex;
     align-items: flex-start;
@@ -109,7 +93,6 @@ section {
     gap: 14px;
   }
 
-  /* Email + Tel -> 1 Style (kein Doppelcode mehr) */
   .contact-link,
   .contact-tel {
     display: inline-flex;
@@ -124,7 +107,6 @@ section {
     &:hover {
       color: #89bcd9;
 
-      /* Icon swap (default -> hover) */
       :is(.icon, .icon2) img:first-child {
         opacity: 0;
       }
@@ -134,7 +116,6 @@ section {
     }
   }
 
-  /* Icon Stack (für .icon UND .icon2) */
   :is(.icon, .icon2) {
     position: relative;
     width: 26px;
@@ -155,7 +136,6 @@ section {
     }
   }
 
-  /* FORM */
   form {
     width: 100%;
     display: flex;
@@ -209,7 +189,6 @@ section {
     resize: none;
   }
 
-  /* POLICY (dein code ist schon gut -> nur etwas aufräumen) */
   .policy {
     display: flex;
     align-items: center;
@@ -288,34 +267,29 @@ section {
     cursor: pointer;
   }
 
-  /* Button "aktiv", wenn checkbox checked */
   form:has(.policy input:checked) button {
     border-color: #89bcd9;
   }
 }
 
-/* Desktop: ALLE Placeholder ausblenden */
 .contact input::placeholder,
 .contact textarea::placeholder {
   opacity: 0;
 }
 
 @media (max-width: 800px) {
-  /* Labels ausblenden */
   .contact .input_name span,
   .contact .input_email span,
   .contact .text_area span {
     display: none;
   }
 
-  /* Placeholder wieder anzeigen */
   .contact input::placeholder,
   .contact textarea::placeholder {
     opacity: 1;
   }
 }
 
-/* MOBILE */
 @media (max-width: 800px) {
   section {
     flex-direction: column;
@@ -353,11 +327,6 @@ section {
     height: 168px;
   }
 
-  /* .up_arrow {
-    order: 2; 
-    margin-top: 10px;
-  } 
-    */
   up_arrow {
     position: static;
     margin-top: 10px;

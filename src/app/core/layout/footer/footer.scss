@@ -1,6 +1,11 @@
 $font-anta: 'Anta';
 $font-josefin: 'Josefin Sans';
 
+:host {
+  display: block;
+  width: 100%;
+}
+
 .footer {
   display: flex;
   justify-content: space-around;
@@ -99,6 +104,7 @@ $font-josefin: 'Josefin Sans';
   }
 
   .legel_notes {
+    padding-top: 12px;
     font-family: $font-josefin;
     display: flex;
     justify-content: start;
@@ -128,17 +134,27 @@ $font-josefin: 'Josefin Sans';
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .footer {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    padding-top: 10px;
+
+    height: 230px;
     padding: 10px;
     .legel_notes {
       display: none;
     }
+    .footer_inner {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+
     .mobile {
       display: block;
     }

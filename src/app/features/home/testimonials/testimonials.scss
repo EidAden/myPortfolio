@@ -110,7 +110,7 @@ $fontex_Josefin: 'Josefin Sans';
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1420px) {
   .shape_cards {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -196,5 +196,12 @@ $fontex_Josefin: 'Josefin Sans';
 
   .shape_cards {
     justify-content: center;
+  }
+  .mobile_title {
+    width: auto;
+    h4 {
+      font-size: 32px;
+      font-family: $fontex_Anta, serif;
+    }
   }
 }

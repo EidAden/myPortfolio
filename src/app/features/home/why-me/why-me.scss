@@ -1,139 +1,168 @@
-$fontex_Anta: 'Anta';
-$fontex_Josefin: 'Josefin Sans';
+$font-anta: 'Anta';
+$font-josefin: 'Josefin Sans';
 
-.container {
-  padding-left: 286px;
-  .why__me {
-    h2 {
-      font-family: $fontex_Anta;
-      font-size: 48px;
-      color: #89bcd9;
-      font-size: 60px;
-      font-weight: 400;
-      text-align: center;
-      margin: 0;
-    }
-  }
+$color-accent: #89bcd9;
+$color-text: #f8f5ec;
+
+.why {
+  padding: 80px 110px;
 }
 
-.me_content {
+.why__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why__title {
+  margin: 0 0 40px 0;
+  text-align: center;
+  font-family: $font-anta;
+  font-weight: 400;
+  color: $color-accent;
+  font-size: clamp(36px, 4vw, 60px);
+}
+
+.why__layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.why__location {
   display: flex;
   align-items: center;
-  gap: 30px;
-  font-family: $fontex_Josefin, sans-serif;
-  color: #f8f5ec;
-  padding: 0 40px;
-  span {
-    font-family: $fontex_Josefin, sans-serif;
-    color: #89bcd9;
-  }
+  gap: 16px;
+  color: $color-text;
+  font-family: $font-josefin, sans-serif;
 }
 
-.location {
+.why__location-text {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.why__location-accent {
+  color: $color-accent;
+}
+
+.why__location-icon {
   position: relative;
-
-  .elp2 {
-    width: 74px;
-    height: 64px;
-  }
-  .elp1 {
-    position: absolute;
-    width: 20px;
-    top: 40px;
-    left: 25px;
-    z-index: 1;
-  }
-
-  p {
-    font-size: 30px;
-    margin-block-start: 0;
-    margin-block-end: 0;
-  }
-}
-.mobile_content {
-  width: 350px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.log_img {
-  display: none;
+  width: 74px;
+  height: 64px;
+  flex: 0 0 auto;
 }
 
-.talk__btns {
-  position: relative;
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-
-  cursor: pointer;
-
-  .btn__talk {
-    width: 134px;
-    height: 48px;
-  }
-
-  .btn__talk_hover {
-    width: 134px;
-    height: 48px;
-  }
-}
-
-.talk__btns img {
-  width: 100%;
+.why__location-pin {
+  width: 74px;
+  height: 64px;
   display: block;
+  object-fit: contain;
 }
 
-.btn__talk {
-  position: relative;
-  z-index: 1;
-}
-
-.btn__talk_hover {
+.why__location-dot {
   position: absolute;
-  top: 0;
+  width: 18px;
+  height: 10px;
+  top: 38px;
+  left: 25px;
+}
+
+.why__location-pin-mobile {
+  display: none;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.why__content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.why__text {
+  margin: 0;
+  max-width: 620px;
+  font-family: $font-josefin, sans-serif;
+  font-size: 16px;
+  line-height: 1.35;
+  color: $color-text;
+}
+
+.why__cta {
+  position: relative;
   width: 134px;
   height: 48px;
+  display: inline-block;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.why__cta-default,
+.why__cta-hover {
+  position: absolute;
+  inset: 0;
+  width: 134px;
+  height: 48px;
+  display: block;
+  object-fit: contain;
+}
+
+.why__cta-hover {
   opacity: 0;
-  z-index: 2;
   transition: opacity 0.25s ease;
 }
 
-.talk__btns:hover .btn__talk_hover {
+.why__cta:hover .why__cta-hover {
   opacity: 1;
 }
 
-.talk__btns:hover .btn__talk {
+.why__cta:hover .why__cta-default {
   opacity: 0;
 }
 
 @media (max-width: 1250px) {
-  .container {
-    padding: 10px;
+  .why {
+    padding: 60px 20px;
+  }
+
+  .why__layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .why__content {
+    align-items: center;
+  }
+
+  .why__cta {
+    display: none;
   }
 }
 
 @media (max-width: 800px) {
-  .container {
-    padding-left: 10px;
+  .why__location {
+    justify-content: center;
   }
-  .me_content {
-    width: fit-content;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 10px;
-    padding: 0;
+
+  .why__location-icon {
+    display: none;
   }
-  .mobile_content {
-    width: auto;
-    .location {
-      display: none;
-    }
-    .log_img {
-      display: block;
-      width: 20px;
-      height: 20px;
-    }
+
+  .why__location-pin-mobile {
+    display: block;
+  }
+
+  .why__location-text {
+    font-size: 20px;
+  }
+
+  .why__text {
+    max-width: 520px;
+    font-size: 15px;
   }
 }

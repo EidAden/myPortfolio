@@ -80,7 +80,8 @@ $fontex_Josefin: 'Josefin Sans';
 
 @media (max-width: 1124px) {
   .hero {
-    height: 606px;
+    height: auto;
+    /*   height: auto; */
   }
   .hero__content {
     padding-left: 20px;
@@ -114,9 +115,9 @@ $fontex_Josefin: 'Josefin Sans';
     max-height: 100%;
   }
 
-  /*  .fullscreen {
-    display: none;
-  } */
+  .fullscreen {
+    display: block;
+  }
   .hero__canvas {
     flex-direction: column;
     gap: 40px;

@@ -1,173 +1,210 @@
-$fontex_Anta: 'Anta';
-$fontex_Josefin: 'Josefin Sans';
+$font-anta: 'Anta';
+$font-josefin: 'Josefin Sans';
 
-.skills__main {
-  padding-left: 286px;
-  h2 {
-    font-family: $fontex_Anta;
-    font-size: 48px;
-    color: #89bcd9;
-    font-size: 60px;
-    font-weight: 400;
-    text-align: center;
-    margin: 0;
-  }
+$color-accent: #89bcd9;
+$color-text: #f8f5ec;
 
-  .skills_icons {
-    width: 100%;
-    display: flex;
-    justify-content: start;
-    gap: 60px;
-    .section_one {
-      display: flex;
-      justify-content: stretch;
-      align-items: center;
-      gap: 60px;
-    }
-    .section_two {
-      display: flex;
-      justify-content: stretch;
-      align-items: center;
-      gap: 60px;
-    }
-    .section_three {
-      display: flex;
-      justify-content: stretch;
-      align-items: center;
-      gap: 60px;
-    }
-  }
+.skills {
+  padding: 80px 110px;
 }
 
-.shape {
+.skills__title {
+  margin: 0 0 50px 0;
+  text-align: center;
+  font-family: $font-anta;
+  font-weight: 400;
+  color: $color-accent;
+  font-size: clamp(36px, 4vw, 60px);
+}
+
+.skills__layout {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  align-items: start;
+  gap: 60px;
+}
+
+/* ---------------- ICONS (LEFT) ---------------- */
+.skills__icons {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.skills__row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.skills__row--small {
+  gap: 60px;
+}
+
+.skills__icon {
+  width: 78px;
+  height: 92px;
+  object-fit: contain;
+}
+
+/* ---------------- LEARNING CIRCLE (RIGHT) ---------------- */
+.skills__learning {
   position: relative;
   width: 380px;
-  height: 480px;
-  .shape_hover {
-    position: absolute;
-    top: 0;
-    width: 380px;
-    height: 380px;
+  height: 380px;
+}
+
+.skills__learning-bg,
+.skills__learning-hover {
+  position: absolute;
+  inset: 0;
+  width: 380px;
+  height: 380px;
+  object-fit: contain;
+}
+
+.skills__learning-bg {
+  z-index: 1;
+}
+
+.skills__learning-hover {
+  z-index: 2;
+  opacity: 0;
+  transform: scale(0.96);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.skills__learning:hover .skills__learning-hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.skills__learning-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  padding: 58px 48px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.skills__learning-title {
+  margin: 0;
+  font-family: $font-josefin;
+  font-size: 16px;
+  color: $color-text;
+}
+
+.skills__learning-icons {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  img {
+    width: 44px;
+    height: 44px;
     object-fit: contain;
-  }
-
-  .shape_bg {
-    position: absolute;
-    top: 0;
-    width: 380px;
-    height: 380px;
-    z-index: 1;
-  }
-
-  .shape_hover {
-    z-index: 2;
-    opacity: 0;
-    transform: scale(0.95);
-    transition:
-      opacity 0.4s ease,
-      transform 0.4s ease;
-  }
-
-  &:hover {
-    .shape_hover {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  .mot_text {
-    padding-left: 60px;
-    padding-top: 60px;
-
-    p {
-      font-size: 18px;
-      font-family: $fontex_Josefin, sans-serif;
-      color: #fffdfd;
-    }
-
-    .coming_cours {
-      width: 150px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      gap: 20px;
-    }
   }
 }
 
-.mobile_content {
+.skills__learning-text {
+  margin: 0;
+  font-family: $font-josefin;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $color-text;
+}
+
+/* ---------------- MOBILE BOX (HIDDEN ON DESKTOP) ---------------- */
+.skills__learning-mobile {
   display: none;
 }
 
+/* ---------------- BREAKPOINTS ---------------- */
 @media (max-width: 1290px) {
-  .skills__main {
-    padding: 20px;
+  .skills {
+    padding: 60px 20px;
   }
-  .skills_icons {
-    display: flex;
-    justify-content: center;
+
+  .skills__layout {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 30px;
+  }
+
+  .skills__icons {
     align-items: center;
-    flex-direction: column;
-    gap: 25px;
+  }
+
+  .skills__row {
+    justify-content: center;
   }
 }
 
 @media (max-width: 600px) {
-  .skills_icons {
-    .allicons {
-      .width_mobile {
-        width: 40px;
-        height: 45px;
-      }
-      .section_three,
-      .section_one,
-      .section_two {
-        gap: 12px;
-        justify-content: center;
-        align-items: center;
-      }
-    }
+  .skills__icon {
+    width: 44px;
+    height: 50px;
   }
-  .shape {
+
+  .skills__row {
+    gap: 12px;
+  }
+
+  .skills__learning {
     display: none;
   }
-  .mobile_content {
-    width: 343px;
-    height: 147px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    .text_mobile_content {
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      flex-direction: column;
-      .title_mobile {
-        font-family: $fontex_Josefin;
-        color: #89bcd9;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        width: 100%;
-      }
-      .text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        p {
-          width: 214px;
-          font-size: 16px;
-          font-family: $fontex_Josefin;
-        }
-      }
+  .skills__learning-mobile {
+    width: min(343px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .skills__learning-mobile-title {
+    margin: 0;
+    font-family: $font-josefin;
+    font-size: 16px;
+    color: $color-accent;
+  }
+
+  .skills__learning-mobile-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    p {
+      margin: 0;
+      font-family: $font-josefin;
+      font-size: 14px;
+      line-height: 1.2;
+      color: $color-text;
+      max-width: 220px;
+    }
+
+    img {
+      width: 90px;
+      height: auto;
+      object-fit: contain;
     }
   }
 }
+
 @media (max-width: 400px) {
-  .mobile_content {
-    width: auto;
-  }
-  .text {
-    flex-direction: column;
+  .skills__learning-mobile-body {
+    align-items: flex-start;
+
+    p {
+      max-width: 100%;
+    }
   }
 }

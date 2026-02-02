@@ -221,12 +221,22 @@ $fontex_Josefin: 'Josefin Sans';
   }
   .mobile_buttons {
     display: flex;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 100;
   }
 
   .btns_mobile {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 6px;
+    padding: 10px 2px;
+
+    .primary {
+      font-size: 16px;
+      padding: 12px 26px;
+    }
   }
   .group__btns {
     display: none !important;
@@ -240,7 +250,7 @@ $fontex_Josefin: 'Josefin Sans';
 
   .ll_content,
   .content_card {
-    max-width: 700px; /* optional */
+    max-width: 700px;
   }
 }
 
@@ -260,5 +270,39 @@ $fontex_Josefin: 'Josefin Sans';
   .title_card h4 {
     font-size: 18px !important;
     color: #89bcd9 !important;
+  }
+  /*  .mobile_buttons {
+    display: flex;
+    gap: 6px;
+    button {
+      font-size: 12px;
+      font-weight: 12px;
+      overflow-x: auto;
+    } 
+  } */
+}
+
+@media (max-width: 400px) {
+  .mobile_buttons {
+    display: flex;
+    gap: 8px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 6px 4px;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mobile_buttons::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile_buttons button {
+    flex: 0 0 auto;
+    font-size: 12px;
+    padding: 6px 12px;
+    white-space: nowrap;
   }
 }

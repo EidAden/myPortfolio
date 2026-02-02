@@ -1,14 +1,25 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 .page-layout {
   margin: 0;
   padding: 0;
   width: 100%;
   max-width: 1440px;
+
   margin: 0 auto;
   background: #262e34;
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
 .header {
-  height: 100vh;
   position: static;
 }
 
@@ -19,6 +30,6 @@
 }
 
 .content {
-  position: sticky;
-  min-height: 100vh;
+  position: relative;
+  flex: 1 1 auto;
 }
