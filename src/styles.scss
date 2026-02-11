@@ -7,7 +7,7 @@ $BG-color_munu: #89bcd9;
   font-family: 'Anta';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/anta-v1-latin-regular.woff2') format('woff2');
+  src: url('assets/fonts/anta-v1-latin-regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -15,7 +15,7 @@ $BG-color_munu: #89bcd9;
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/josefin-sans-v34-latin-regular.woff2') format('woff2');
+  src: url('assets/fonts/josefin-sans-v34-latin-regular.woff2') format('woff2');
 }
 
 $fontex_Anta: 'Anta';
@@ -46,4 +46,11 @@ body {
   background-color: var(--mat-sys-surface);
   color: var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
+}
+
+@media (max-width: 700px) {
+  body {
+    background-color: #000000;
+    max-height: 100%;
+  }
 }

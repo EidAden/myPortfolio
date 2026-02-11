@@ -1,12 +1,15 @@
-<div class="my__projects">
+<div class="my__projects" id="projects">
   <h2>My Projects</h2>
 </div>
 
 <div class="main_content">
   <div class="group__btns">
-    <button>.1 Join</button><button>2.Ell polloco</button> <button>3.Coming Soon</button>
+    <button>.1 Join</button
+    ><button (click)="select('game')" [class.active]="active === 'game'">2.Ell polloco</button>
+    <button>3.Coming Soon</button>
   </div>
-  <div class="mobile_buttons">
+
+  <!--  <div class="mobile_buttons">
     <button>1.Project</button>
     <button>2. Project</button>
     <button>3.Project</button>
@@ -69,5 +72,5 @@
         <a class="btn">GitHub</a>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

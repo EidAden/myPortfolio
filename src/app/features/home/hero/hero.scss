@@ -81,7 +81,6 @@ $fontex_Josefin: 'Josefin Sans';
 @media (max-width: 1124px) {
   .hero {
     height: auto;
-    /*   height: auto; */
   }
   .hero__content {
     padding-left: 20px;
@@ -89,6 +88,7 @@ $fontex_Josefin: 'Josefin Sans';
   }
   .hero__content h1 {
     font-size: 48px;
+    font-family: $fontex_Anta;
   }
 
   .hero__circle {
@@ -110,9 +110,17 @@ $fontex_Josefin: 'Josefin Sans';
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 60px;
   }
   .hero {
     max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .mobile_menu {
+      width: 100%;
+    }
   }
 
   .fullscreen {

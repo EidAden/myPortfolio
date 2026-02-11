@@ -1,15 +1,17 @@
 <section class="hero">
+  <div class="mobile_menu">
+    <app-mobile-menu (menuStateChange)="onMenuStateChange($event)"></app-mobile-menu>
+  </div>
   <div class="hero__canvas">
-    <div class="hero__circle">
-      <div class="mobile_menu">
-        <app-mobile-menu></app-mobile-menu>
+    @if (!isMenuOpen) {
+      <div class="hero__circle">
+        <div class="fullscreen">
+          <img src="images/defeult.png" alt="shape" class="shape default" />
+          <img src="images/hover.png" alt="shape" class="shape hover" />
+          <img src="images/yusra.png" alt="Yusra" class="yusra" />
+        </div>
       </div>
-      <div class="fullscreen">
-        <img src="images/defeult.png" alt="shape" class="shape default" />
-        <img src="images/hover.png" alt="shape" class="shape hover" />
-        <img src="images/yusra.png" alt="Yusra" class="yusra" />
-      </div>
-    </div>
+    }
 
     <div class="hero__content">
       <div class="social">

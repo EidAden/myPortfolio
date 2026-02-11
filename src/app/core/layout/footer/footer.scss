@@ -7,9 +7,6 @@ $font-josefin: 'Josefin Sans';
 }
 
 .footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   height: 150px;
   font-size: 24px;
   font-weight: 700;
@@ -132,6 +129,12 @@ $font-josefin: 'Josefin Sans';
   .mobile {
     display: none;
   }
+}
+.footer_inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 @media (max-width: 900px) {

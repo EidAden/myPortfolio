@@ -1,41 +1,37 @@
 <div class="mobile_overlay">
   <div class="menu_bar">
     <div class="logo_content">
-      <img src="images/ch-logo.png" alt="Logo" class="logo-img" />
+      <img src="mobile_img/mob_logo.png" alt="Logo" class="logo-img" />
 
       <div class="logo-text">
         <span class="logo-name">E. Aden</span>
         <span class="logo-role">Developer</span>
       </div>
     </div>
-    <img src="mobile_img/ham-menu.png" alt="menu_bar" class="ham-menu" />
+
+    <img src="mobile_img/mob-menu.png" alt="menu_bar" class="ham-menu" (click)="toggleMenu()" />
   </div>
-  <div class="content_hidden">
-    <div class="shape_img">
-      <img src="mobile_img/ellpis.png" alt="menu Shape" class="shape_menu" />
 
-      <ul class="nav__links">
-        <li>
-          <a routerLink="/features" routerLinkActive="active">Why me</a>
-        </li>
-        <li>
-          <a routerLink="/pricing" routerLinkActive="active">Skills</a>
-        </li>
-        <li>
-          <a routerLink="/about" routerLinkActive="active">Projects</a>
-        </li>
-        <li>
-          <a routerLink="/contact" routerLinkActive="active">Contact</a>
-        </li>
-      </ul>
+  @if (menuOpen()) {
+    <div class="content_hidden">
+      <div class="shape_img">
+        <img src="mobile_img/ellpis.png" alt="menu Shape" class="shape_menu" />
 
-      <div class="lang">
-        <span class="de">DE</span>
-        <div class="lip">
-          <img src="mobile_img/en-ell.png" alt="ellpis English" class="en-ell" />
-          <span class="en">EN</span>
+        <ul class="nav__links">
+          <li><a href="#why-me" (click)="closeMenu()">Why me</a></li>
+          <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
+          <li><a href="#projects" (click)="closeMenu()">Projects</a></li>
+          <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+        </ul>
+
+        <div class="lang">
+          <span class="de">DE</span>
+          <div class="lip">
+            <img src="mobile_img/en-ell.png" alt="ellpis English" class="en-ell" />
+            <span class="en">EN</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  }
 </div>

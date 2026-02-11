@@ -9,4 +9,10 @@ import { MobileMenu } from '../../../shared/ui/mobile-menu/mobile-menu';
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
-export class Hero {}
+export class Hero {
+  isMenuOpen = false;
+
+  onMenuStateChange(open: boolean) {
+    this.isMenuOpen = open;
+  }
+}
